@@ -5,7 +5,7 @@ export = common;
 declare function common(suites: Mocha.Suite[], context: Mocha.MochaGlobals, mocha: Mocha): common.CommonFunctions;
 
 declare namespace common {
-    export interface CommonFunctions {
+    interface CommonFunctions {
         /**
          * This is only present if flag --delay is passed into Mocha. It triggers
          * root suite execution.
@@ -56,7 +56,7 @@ declare namespace common {
         test: TestFunctions;
     }
 
-    export interface CreateOptions {
+    interface CreateOptions {
         /** Title of suite */
         title: string;
 
@@ -73,7 +73,7 @@ declare namespace common {
         isOnly?: boolean;
     }
 
-    export interface SuiteFunctions {
+    interface SuiteFunctions {
         /**
          * Create an exclusive Suite; convenience function
          */
@@ -90,7 +90,7 @@ declare namespace common {
         create(opts: CreateOptions): Mocha.Suite;
     }
 
-    export interface TestFunctions {
+    interface TestFunctions {
         /**
          * Exclusive test-case.
          */
